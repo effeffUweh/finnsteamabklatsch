@@ -1,0 +1,24 @@
+subprojects {
+    apply plugin: 'java'
+    java {
+        toolchain { languageVersion = JavaLanguageVersion.of(25) }
+    }
+    sourceSets {
+        main { java { srcDirs = ['main'] } }
+        test { java { srcDirs = ['test'] } }
+    }
+    repositories { mavenCentral() }
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+    }
+    test {
+        useJUnitPlatform()
+    }
+    tasks.withType(JavaExec) {
+        standardOutput = System.out
+        errorOutput = System.err
+        outputs.upToDateWhen { false }
+    }
+}
