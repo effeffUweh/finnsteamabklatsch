@@ -7,19 +7,19 @@ public class FizzBuzz {
         for (int i = 1; i <= n; i++) {
 
             if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
+                System.out.print("FizzBuzz\n");
             }
 
             else if (i % 3 == 0) {
-                System.out.println("Fizz");
+                System.out.print("Fizz\n");
             }
 
             else if (i % 5 == 0) {
-                System.out.println("Buzz");
+                System.out.print("Buzz\n");
             }
 
             else {
-                System.out.println(i);
+                System.out.print(i+"\n");
             }
 
         }
