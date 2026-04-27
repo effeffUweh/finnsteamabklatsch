@@ -2,7 +2,7 @@ public class FizzBuzz {
 
     public static void main() {
 
-        int n = 19;
+        int n = 15;
 
         for (int i = 1; i <= n; i++) {
 
